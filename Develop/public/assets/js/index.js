@@ -89,9 +89,9 @@ const handleNoteDelete = (e) => {
   e.stopPropagation();
 
   const note = e.target;
-  const noteId = JSON.parse(note.parentElement.getAttribute('data-note')).id;
+  const noteId = JSON.parse(note.parentElement.getAttribute('data-note')).tip_id;
 
-  if (activeNote.id === noteId) {
+  if (activeNote.tip_id === noteId) {
     activeNote = {};
   }
 
@@ -139,6 +139,7 @@ const renderNoteList = async (notes) => {
   // Returns HTML element with or without a delete button
   const createLi = (text, delBtn = true) => {
     const liEl = document.createElement('li');
+    liEl.classList.add('list-group-item');
     liEl.classList.add('list-group-item');
 
     const spanEl = document.createElement('span');
