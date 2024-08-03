@@ -1,4 +1,5 @@
-# Note Taker APP
+# ExpressThoughts
+#Note Taker APP
 
 The note taker app allows users to enter and delete notes. 
 
